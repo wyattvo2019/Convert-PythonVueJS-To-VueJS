@@ -2,12 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
 import Home from "@/views/Home.vue"
 import PageNotFound from '@/views/PageNotFound.vue'
+import AirportDetail from '@/views/AirportDetail.vue'
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: '/airport/:code',
+    name: "AirportDetail",
+    component: AirportDetail,
   },
   {
     path: '/about',
