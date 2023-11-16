@@ -1,17 +1,14 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import AppHeader from '@/components/AppHeader.vue'
-// export default {
-//   components: {
-//     AppHeader
-//   }
-// }
+import AppFooter from '@/components/AppFooter.vue'
 </script>
 
 <template>
   <app-header />
-  <!-- <RouterView /> -->
+  <RouterView />
+  <app-footer />
 </template>
 
 <style scoped>
