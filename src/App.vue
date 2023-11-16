@@ -3,11 +3,11 @@ import { RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import "./css/global.css"
 </script>
-
 <template>
   <app-header />
-  <RouterView />
+  <router-view />
   <app-footer />
 </template>
 

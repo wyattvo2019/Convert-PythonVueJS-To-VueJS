@@ -1,0 +1,6 @@
+body {
+  background-color: white;
+}
+body.intro {
+  background-color: pink;
+}
