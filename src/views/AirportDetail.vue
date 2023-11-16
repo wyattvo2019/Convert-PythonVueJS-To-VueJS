@@ -2,6 +2,7 @@
   <div>
     <p>{{ airport.name }} ({{ airport.abbreviation }})</p>
     <p>Located in {{ airport.city }}, {{ airport.state }}</p>
+    <router-view />
   </div>
 </template>
 

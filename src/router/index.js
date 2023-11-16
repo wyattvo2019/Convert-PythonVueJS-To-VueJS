@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from "@/views/Home.vue"
 import PageNotFound from '@/views/PageNotFound.vue'
 import AirportDetail from '@/views/AirportDetail.vue'
+import AirportDestinations from '@/views/AirportDestinations.vue'
 
 const routes = [
   {
@@ -14,6 +15,13 @@ const routes = [
     path: '/airport/:code',
     name: "AirportDetail",
     component: AirportDetail,
+    children: [
+			{
+			  path: 'destinations',
+				name: 'AirportDestinations',
+				component: AirportDestinations
+			}
+		]
   },
   {
     path: '/about',
