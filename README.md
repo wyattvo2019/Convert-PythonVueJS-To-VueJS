@@ -90,4 +90,22 @@ import AppHeader from '@/components/AppHeader.vue'
 ```sh
 touch src/components/AppFooter.vue
 ```
+```
+<!-- src/components/AppFooter.vue -->
+<template>
+  <footer>
+    <p>Copyright &copy;{{ year }} </p>
+  </footer>
+</template>
+
+<script>
+import { computed } from 'vue'
+export default {
+  setup () {
+    const year = computed(() => new Date().getFullYear())
+    return { year }
+  }
+}
+</script>
+```
 
