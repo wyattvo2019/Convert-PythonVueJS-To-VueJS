@@ -11,17 +11,28 @@
       <p>{{ airport.name }}</p>
       <p>{{ airport.city }}, {{ airport.state }}</p>
     </router-link>
+    <router-link
+      v-for="author in allData.author" 
+      :key="author.id"
+      class="airport"
+      :to="{ name: 'AuthorDetail', params: { slug: author.slug } }"
+    >
+      <p>{{ author.name }}</p>
+      <p>{{ author.id }}</p>
+      <p>{{ author.slug }}</p>
+    </router-link>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
 import allAirports from '@/data/airports.js'
-
+import allDatas from "../data/data"
 export default {
   setup() {
     const airports = ref(allAirports)
-		return { airports }
+    const allData = ref(allDatas)
+		return { airports, allData }
 	}
 }
 </script>

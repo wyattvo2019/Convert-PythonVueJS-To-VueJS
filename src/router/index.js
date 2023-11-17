@@ -4,7 +4,8 @@ import Home from "@/views/Home.vue"
 import PageNotFound from '@/views/PageNotFound.vue'
 import AirportDetail from '@/views/AirportDetail.vue'
 import AirportDestinations from '@/views/AirportDestinations.vue'
-
+import AuthorDetail from "../views/AuthorDetail.vue"
+import Article from "../views/Article.vue"
 const routes = [
   {
     path: "/",
@@ -32,6 +33,16 @@ const routes = [
     path: '/:catchAll(.*)*',
     name: "PageNotFound",
     component: PageNotFound,
+  },
+  {
+    path: '/author/:slug',
+    name: "AuthorDetail",
+    component: AuthorDetail,
+  },
+  {
+    path: '/article/:slug',
+    name: "Article",
+    component: Article,
   },
 ]
 
